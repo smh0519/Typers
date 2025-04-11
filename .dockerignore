@@ -1,0 +1,17 @@
+# node_modules는 도커 이미지 안에서 따로 설치됨
+node_modules
+
+# 빌드 결과물은 도커 안에서 새로 생성됨
+build
+
+# Git 관련 파일 제외
+.git
+.gitignore
+
+# Dockerfile, dockerignore 자체 제외 (선택)
+Dockerfile
+.dockerignore
+
+# IDE 관련 파일
+.vscode
+*.log
