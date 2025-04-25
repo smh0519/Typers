@@ -3,12 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//redux 추가
-import {legacy_createStore as createStore} from 'redux';
-import {Provider} from 'react-redux';
-import {devToolsEnhancer} from '@redux-devtools/extension'
-import rootReducer from './moduls';
-const store = createStore(rootReducer,devToolsEnhancer())
+import store from './reducers';
+//스토어 생성
+import {Provider} from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
