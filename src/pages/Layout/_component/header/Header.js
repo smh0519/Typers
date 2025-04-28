@@ -8,7 +8,7 @@ const Header = () => {
     const mainMeuItems = [// 메인메뉴 
         {id : 0, title : '타이핑', url : '/'},
         {id : 1, title : '커스텀', url : '/'},
-        {id : 2, title : '랭킹킹', url : '/'},
+        {id : 2, title : '랭킹', url : '/'},
         {id : 3, title : '창작마당',url : '/'}
     ]
 
