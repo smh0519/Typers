@@ -48,7 +48,7 @@ const Header = () => {
     return (
         <S.Header>
           <S.Logo>
-              logo
+              <img src="images/typers-logo.png" alt='logo' width={70} height={70}/>
           </S.Logo>
           <S.Nav 
             onMouseEnter={EnterMenu}
@@ -59,7 +59,7 @@ const Header = () => {
                 <MainMenu key={idx} MenuItem={MenuItem} />
               ))}
               </S.Menu>
-              <S.SubMenuBox ishover={ishover}>
+              <S.SubMenuBox $ishover={ishover}>
                   <S.SubMenu>
                     {subMenuItems.map((data,idx)=> (
                       <SubMenu key={idx} children={data}/>

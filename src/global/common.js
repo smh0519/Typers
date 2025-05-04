@@ -16,6 +16,8 @@ export const felxColumn  = css`
   flex-direction: column;
 `
 
-
-
-
+export const felxRowCenter = css`
+  ${felxRow}
+  justify-content: center;
+  align-items: center;
+`

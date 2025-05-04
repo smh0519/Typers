@@ -20,8 +20,9 @@ S.Main = styled.div`
 S.Logo = styled.div`
     flex: 2;
     height: 100%;
-    text-align: center;
-    line-height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 S.Nav = styled.div`
@@ -45,8 +46,8 @@ S.SubMenuBox = styled.div`
     background-color: #fff;
     border-radius: 0 0 20px 20px;
     overflow: hidden;
-    max-height: ${({ ishover }) => (ishover ? '300px' : '0')};
-    opacity: ${({ ishover }) => (ishover ? '1' : '0')};
+    max-height: ${({ $ishover }) => ($ishover ? '300px' : '0')};
+    opacity: ${({ $ishover }) => ($ishover ? '1' : '0')};
     transform: translateY(0);
     transition: max-height 0.4s ease, opacity 0.4s ease;
     border-top: 2px solid transparent;

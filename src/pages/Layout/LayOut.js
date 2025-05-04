@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import S from './style';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import Header from './_component/header/Header';
+import Header from './_components/header/Header';
 
 const LayOut = () => {
 
