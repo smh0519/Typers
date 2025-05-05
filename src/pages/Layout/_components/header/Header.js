@@ -48,7 +48,7 @@ const Header = () => {
     return (
         <S.Header>
           <S.Logo>
-              <img src="images/typers-logo.png" alt='logo' width={70} height={70}/>
+              <Link to={"/"}><S.LogoImg src="images/logo.jpg" alt='logo' width={70} height={70}/></Link>
           </S.Logo>
           <S.Nav 
             onMouseEnter={EnterMenu}

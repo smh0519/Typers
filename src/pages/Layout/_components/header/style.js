@@ -25,6 +25,11 @@ S.Logo = styled.div`
     align-items: center;
 `
 
+S.LogoImg  = styled.img`
+    cursor: pointer;
+`
+
+
 S.Nav = styled.div`
     flex: 5;
     height: 100%;
