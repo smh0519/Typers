@@ -1,18 +1,84 @@
-import React from 'react';
+import React, { useState } from 'react';
 import S from './style';
 import { useSelector } from 'react-redux';
-import GoToblacks from './_components/GoToblacks';
+import GoToBlock from './_components/GoToBlock';
+import Example from './_components/ExampleImg/Example';
 const Home = () => {
     const auth = useSelector((state)=> state.auth)
+
+
+    //GotoBlock의 text,url을 담고 있음
+    const GoToLink = [
+        {
+            content : '기본',
+            url : '/',
+        },
+        {
+            content : '왼손위',
+            url : '/',
+        },
+        {
+            content : '왼손아래',
+            url : '/',
+        },
+        {
+            content : '가운데',
+            url : '/',
+        },
+        {
+            content : '오른쪽',
+            url : '/',
+        },
+        {
+            content : '커스텀',
+            url : '/',
+        },
+        {
+            content : '긴글연습',
+            url : '/',
+        }
+    ]
+
+    const [items, setItems] = useState(GoToLink);
+    const [direction, setDirection] = useState(null); // 'left' or 'right'
+
+
+    
+    const handleRight = () => {
+        setDirection('left')
+        console.log(direction)
+        const newList = [...items];
+        const last = newList.pop();
+        newList.unshift(last);
+        setItems(newList);
+    }
+
+    const handleLeft = () => {
+        setDirection('right')
+        console.log(direction)
+        const newList = [...items];
+        const first = newList.shift();
+        newList.push(first);
+        setItems(newList);
+    }
+
+
     return (
         <S.Main>
             <S.GoToContainer>
-                <img src="" alt="" />
-                <GoToblacks/>
-                <img  src="" alt="" />
+                <S.LeftArrow src="images/home/arrow.png" alt="left" onClick={handleLeft}/>
+                    <S.ShowContainer>
+                        <S.SliderWrapper>
+                            {items.map((data,idx) =>(
+                                <GoToBlock key={idx} props={data}/>
+                            ))}
+                        </S.SliderWrapper>
+                    </S.ShowContainer>
+                <S.RightArrow  src="images/home/arrow.png" alt="right" onClick={handleRight}/>
             </S.GoToContainer>
             <S.UserGraph>
-                <h1>유저 그래프</h1>
+                <Example/>
+                <S.NoticeTitle>로그인 후 확인가능 합니다.</S.NoticeTitle>
             </S.UserGraph>
         </S.Main>
     );

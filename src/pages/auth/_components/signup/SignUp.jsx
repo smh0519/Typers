@@ -71,7 +71,7 @@ const SignUp = () => {
             </S.OrBorder>
             <S.EasyBox>
                 <S.GoogleButton onClick={onSubmitGoogle}>
-                    <S.Google src="/images/auth/google.png" alt="구글 로그인"/>
+                    <S.Google src={"../public/images/auth/google.png"} alt="구글 로그인"/>
                     <p>구글계정으로 회원가입</p>
                 </S.GoogleButton>
             </S.EasyBox>
