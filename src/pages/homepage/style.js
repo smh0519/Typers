@@ -21,7 +21,36 @@ S.UserGraph = styled.div`
     flex-grow: 1;
     position: relative;
 `
+/////
+S.ChartContainer = styled.div`
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9ff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+`
 
+S.ChartTitle = styled.h2`
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+
+  span {
+    color: #6E58FF;
+    font-weight: 700;
+  }
+`;
+
+S.Chart = styled.div`
+  width: 100%;
+  height: 300px;
+  position: relative;
+`;
+
+///////
 // style.js
 S.ShowContainer = styled.div`
   width: calc(240px * 5);  // GoToBlock 5개 너비만큼만

@@ -3,9 +3,11 @@ import S from './style';
 import { useSelector } from 'react-redux';
 import GoToBlock from './_components/GoToBlock';
 import Example from './_components/ExampleImg/Example';
+import UserChart from '../../components/UserChart';
+
 const Home = () => {
     const auth = useSelector((state)=> state.auth)
-
+    const isLognin = auth.isLoggedIn
 
     //GotoBlock의 text,url을 담고 있음
     const GoToLink = [
@@ -62,8 +64,7 @@ const Home = () => {
         setItems(newList);
     }
 
-
-    return (
+        return (
         <S.Main>
             <S.GoToContainer>
                 <S.LeftArrow src="images/home/arrow.png" alt="left" onClick={handleLeft}/>
@@ -77,8 +78,22 @@ const Home = () => {
                 <S.RightArrow  src="images/home/arrow.png" alt="right" onClick={handleRight}/>
             </S.GoToContainer>
             <S.UserGraph>
-                <Example/>
-                <S.NoticeTitle>로그인 후 확인가능 합니다.</S.NoticeTitle>
+                {isLognin ? (
+                    <S.ChartContainer>
+            <S.ChartTitle>
+              나의 활동 - <span>2024</span>년 5월 <span>2</span>주차
+            </S.ChartTitle>
+            <S.Chart>
+              <UserChart/>
+            </S.Chart>
+          </S.ChartContainer>
+                ):(
+                    <>
+                    <Example/>
+                    <S.NoticeTitle>로그인 후 확인가능 합니다.</S.NoticeTitle>
+                </>
+                )
+                }
             </S.UserGraph>
         </S.Main>
     );
