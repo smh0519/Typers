@@ -7,17 +7,17 @@ const Header = () => {
 
     const mainMeuItems = [// 메인메뉴 
         {id : 0, title : '타이핑', url : '/'},
-        {id : 1, title : '커스텀', url : '/'},
-        {id : 2, title : '랭킹', url : '/'},
-        {id : 3, title : '창작마당',url : '/'}
+        {id : 1, title : '커스텀', url : '/custom'},
+        {id : 2, title : '랭킹', url : '/ranklist'},
+        {id : 3, title : '창작마당',url : '/workshop'}
     ]
 
       const subMenuItems = [// 서브메뉴
         [
-            {id : 0, title : '긴글연습', url : '/'},
-            {id : 1, title : '짧은글연습', url : '/'},
-            {id : 2, title : '낱말연습', url : '/'},
-            {id : 3, title : '자리연습', url : '/'},
+            {id : 0, title : '긴글연습', url : '/ko/typing-1'},
+            {id : 1, title : '짧은글연습', url : '/ko/typing-2'},
+            {id : 2, title : '낱말연습', url : '/ko/typing-3'},
+            {id : 3, title : '자리연습', url : '/ko/typing-4'},
             {id : 4 , title : '미니게임', url : '/'},
         ],
         [
