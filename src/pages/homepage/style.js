@@ -21,11 +21,19 @@ S.UserGraph = styled.div`
     flex-grow: 1;
     position: relative;
 `
-/////
-S.ChartContainer = styled.div`
+
+S.ChartBox = styled.div`
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+`
+
+S.ChartContainer = styled.div`
+  width: 70%;
   max-width: 800px;
-  margin: 40px auto;
   padding: 20px;
   background-color: #f9f9ff;
   border-radius: 20px;
@@ -96,7 +104,27 @@ S.NoticeTitle = styled.div`
     position: absolute;
     font-size: 30px;
     color: #6E58FF;
-    background-color: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+`
+
+S.Characterbox = styled.div`
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom:5% ;
+`
+S.CharacterImg = styled.img`
+  width: 60%;
+  height: 60%;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+`
+
+S.Speech = styled.div`
+  width: 200px;
+  height: 100%;
+  background-color: red;
 `
 
 export default S;

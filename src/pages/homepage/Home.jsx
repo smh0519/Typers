@@ -79,14 +79,20 @@ const Home = () => {
             </S.GoToContainer>
             <S.UserGraph>
                 {isLognin ? (
-                    <S.ChartContainer>
-            <S.ChartTitle>
-              나의 활동 - <span>2024</span>년 5월 <span>2</span>주차
-            </S.ChartTitle>
-            <S.Chart>
-              <UserChart/>
-            </S.Chart>
-          </S.ChartContainer>
+                    <S.ChartBox>
+                        <S.ChartContainer>
+                            <S.ChartTitle>
+                            나의 활동 - <span>2024</span>년 5월 <span>2</span>주차
+                            </S.ChartTitle>
+                            <S.Chart>
+                            <UserChart/>
+                            </S.Chart>
+                        </S.ChartContainer>
+                        <S.Characterbox>
+                            <S.CharacterImg src={"images/character/character_emotion_basic.png"} />
+                            <S.Speech>{/*말품선 이미지 추가할 예정*/}</S.Speech>
+                        </S.Characterbox>
+                    </S.ChartBox>
                 ):(
                     <>
                     <Example/>

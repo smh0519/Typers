@@ -17,13 +17,21 @@ S.GraphImgBox = styled.div`
 S.GraphImg = styled.img`
 width: 90%;
 position: absolute;
-bottom: 10px;
-left: 50px;
+bottom: 5%;
+left: 50%;
+transform: translateX(-50%);
 `
 
 S.CharBox = styled.div`
     width: 40%;
     height: 100%;
+    position: relative;
 `
 
+S.CharacterImg = styled.img`
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 5%;
+`
 export default S;
