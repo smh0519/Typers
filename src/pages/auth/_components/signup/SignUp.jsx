@@ -1,34 +1,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import S from './style';
+import { signUp } from '../../../../api/auth';
 
 const SignUp = () => {
-    const onSubmit = async (data) =>{
-        console.log("회원가입 폼 데이터:", data);
-        try {
-            const res = await fetch('', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                id: data.id,
-                email: data.email,
-                password: data.pwd,
-              }),
-            });
-        
-            if (res.ok) {
-              const result = await res.json();
-              console.log('회원가입 성공:', result);
-            } else {
-              const error = await res.json();
-              console.error('회원가입 실패:', error);
-            }
-          } catch (err) {
-            console.error('네트워크 오류:', err);
-          }
-    }
+
+
    
 
     const onSubmitGoogle = () =>{
@@ -49,7 +26,7 @@ const SignUp = () => {
     return (
         <S.SignUpContainer>
             <S.Title>계정 만들기</S.Title>
-             <S.Form  onSubmit={handleSubmit(onSubmit)} >
+             <S.Form  onSubmit={handleSubmit(signUp)} >
                 <S.InputBox>
                     <S.Label>
                         <S.Input type="text" 

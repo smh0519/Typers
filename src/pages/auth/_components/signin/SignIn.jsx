@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import S from './style';
 import { useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { signin } from '../../../../api/auth';
 
 const SignIn = () => {
     const location = useLocation();
@@ -23,14 +24,14 @@ const SignIn = () => {
     return (
         <S.SignInContainer>
             <S.Title>로그인</S.Title>
-            <S.Form onSubmit={handleSubmit(onSubmit)}>
+            <S.Form onSubmit={handleSubmit(signin)}>
                 <S.InputBox>
                     <S.Input type="text" 
                     {...register("email",{
                         required : true
                     })}
                     placeholder='이메일'/>
-                    <S.Input type="text"  
+                    <S.Input type="password"  
                     {...register("pwd",{
                         required : true
                     })}

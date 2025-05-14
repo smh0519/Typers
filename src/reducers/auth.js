@@ -6,7 +6,7 @@ const initialUser = {
 };
 
 const initialState = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   current: initialUser
 };
 

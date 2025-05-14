@@ -1,7 +1,7 @@
 export const signUp = async (data) =>{
     console.log("회원가입 폼 데이터:", data);
     try {
-        const res = await fetch('', {
+        const res = await fetch('http://localhost:8000/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -25,6 +25,28 @@ export const signUp = async (data) =>{
       }
 }
 
-export const signin = async () => {
+export const signin = async (data) => {
+    console.log("회원가입 폼 데이터:", data);
+    try {
+        const res = await fetch('http://localhost:8000/signin', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: data.email,
+            password: data.pwd,
+          }),
+        });
     
+        if (res.ok) {
+          const result = await res.json();
+          console.log('회원가입 성공:', result);
+        } else {
+          const error = await res.json();
+          console.error('회원가입 실패:', error);
+        }
+      } catch (err) {
+        console.error('네트워크 오류:', err);
+      }
 }
