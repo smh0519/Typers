@@ -3,8 +3,11 @@ import S from './style';
 import { Link } from 'react-router-dom';
 import SubMenu from './_component/nav/subMenu/SubMenu';
 import MainMenu from './_component/nav/mainMenu/MainMenu';
+import { useSelector } from 'react-redux';
 const Header = () => {
-
+    const  auth = useSelector((state) => state.auth)
+    const isLogin = auth.isLoggedIn
+    console.log(isLogin)
     const mainMeuItems = [// 메인메뉴 
         {id : 0, title : '타이핑', url : '/'},
         {id : 1, title : '커스텀', url : '/custom'},
@@ -68,10 +71,15 @@ const Header = () => {
               </S.SubMenuBox>
             </S.Nav>
             <S.ButtonContainer>
-              <S.Auth>
+              {isLogin ? (
+                <></>
+              ):(
+                <S.Auth>
                 <Link to="/auth?type=signin">로그인</Link>/
                 <Link to="/auth?type=signup">회원가입</Link>
               </S.Auth>
+              )}
+            
             </S.ButtonContainer>
         </S.Header>
     );

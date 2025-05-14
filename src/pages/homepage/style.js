@@ -37,7 +37,7 @@ S.ChartContainer = styled.div`
   padding: 20px;
   background-color: #f9f9ff;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #6E58FF;
 `
 
 S.ChartTitle = styled.h2`
@@ -122,9 +122,38 @@ S.CharacterImg = styled.img`
 `
 
 S.Speech = styled.div`
-  width: 200px;
+  width: 300px;
   height: 100%;
-  background-color: red;
+  position: relative;
 `
+
+S.SpeechBalloonImg = styled.img`
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+`
+
+S.HelloBox = styled.div`
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  &>h3{
+  }
+
+  & > p{
+    color : #6DE701;
+  }
+`
+
+
 
 export default S;

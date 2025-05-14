@@ -90,7 +90,13 @@ const Home = () => {
                         </S.ChartContainer>
                         <S.Characterbox>
                             <S.CharacterImg src={"images/character/character_emotion_basic.png"} />
-                            <S.Speech>{/*말품선 이미지 추가할 예정*/}</S.Speech>
+                            <S.Speech>
+                                <S.SpeechBalloonImg src={"images/home/speechballoon.png"} alt='말풍선'/>
+                                <S.HelloBox>
+                                    <h2>와 정말 멋진걸!</h2>
+                                    <p>User1</p>
+                                </S.HelloBox>
+                            </S.Speech>
                         </S.Characterbox>
                     </S.ChartBox>
                 ):(
