@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, Tuple } from '@reduxjs/toolkit';
 
 const initialUser = {
   id: "",
@@ -6,7 +6,7 @@ const initialUser = {
 };
 
 const initialState = {
-  isLoggedIn: false,
+  isLoggedIn: true,
   current: initialUser
 };
 

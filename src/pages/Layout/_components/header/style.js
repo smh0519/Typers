@@ -71,6 +71,24 @@ S.ButtonContainer = styled.div`
     flex: 3;
     height: 110px;
     right: 0;
+    position: relative;
+`
+
+S.ImgButtonContainer = styled.div`
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+`
+S.Line = styled.div`
+    width: 2px;
+    height: 50%;
+    background-color: #6E58FF;
+    margin: 0 20px;
 `
 
 S.Auth = styled.div`
@@ -85,6 +103,14 @@ S.Auth = styled.div`
     & > a{
         color: #6E58FF;
     }
+`
+
+S.LogoutButton = styled.button`
+    background:none;
+    border: none;
+    color: #6E58FF;
+    font-family: 500;
+    font-size: 20px;
 `
 
 export default S;

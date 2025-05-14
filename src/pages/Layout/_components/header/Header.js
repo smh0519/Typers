@@ -3,9 +3,12 @@ import S from './style';
 import { Link } from 'react-router-dom';
 import SubMenu from './_component/nav/subMenu/SubMenu';
 import MainMenu from './_component/nav/mainMenu/MainMenu';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../../../reducers/auth';
 const Header = () => {
     const  auth = useSelector((state) => state.auth)
+    const dispatch = useDispatch()
+
     const isLogin = auth.isLoggedIn
     console.log(isLogin)
     const mainMeuItems = [// 메인메뉴 
@@ -14,6 +17,7 @@ const Header = () => {
         {id : 2, title : '랭킹', url : '/ranklist'},
         {id : 3, title : '창작마당',url : '/workshop'}
     ]
+
 
       const subMenuItems = [// 서브메뉴
         [
@@ -37,7 +41,7 @@ const Header = () => {
         ],
     ]
 
-
+    // 메뉴 hover 여부 검사
     const [ishover,setIsHover] = useState(false)
 
     const EnterMenu = () =>{
@@ -46,6 +50,12 @@ const Header = () => {
   
     const LeaveMenu = () =>{
       setIsHover(false)
+    }
+
+
+    const isLogout = () => {
+      alert("로그아웃 되었습니다")
+      dispatch(logout())
     }
 
     return (
@@ -72,7 +82,14 @@ const Header = () => {
             </S.Nav>
             <S.ButtonContainer>
               {isLogin ? (
-                <></>
+                <S.Auth>
+                    <S.Line/>
+                    <S.ImgButtonContainer>
+                      <img src='images/home/user.png' alt='user'/>
+                      <img src='images/home/notice.png' alt='notice'/>
+                    </S.ImgButtonContainer>
+                  <S.LogoutButton onClick={isLogout}>로그아웃</S.LogoutButton>
+                </S.Auth>
               ):(
                 <S.Auth>
                 <Link to="/auth?type=signin">로그인</Link>/
