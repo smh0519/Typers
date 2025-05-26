@@ -13,10 +13,6 @@ const SignIn = () => {
         console.log("회원가입 폼 데이터");
     }
 
-    const onSubmit = (data) =>{
-        console.log("로그인 폼 데이터:", data);
-    }
-
     const   { register, handleSubmit, getValues , 
                     formState: { errors } 
                 } = useForm({mode:'onChange'});
