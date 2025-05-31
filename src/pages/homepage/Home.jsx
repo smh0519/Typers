@@ -48,7 +48,6 @@ const Home = () => {
     
     const handleRight = () => {
         setDirection('left')
-        console.log(direction)
         const newList = [...items];
         const last = newList.pop();
         newList.unshift(last);
@@ -57,7 +56,6 @@ const Home = () => {
 
     const handleLeft = () => {
         setDirection('right')
-        console.log(direction)
         const newList = [...items];
         const first = newList.shift();
         newList.push(first);

@@ -10,7 +10,6 @@ const Header = () => {
     const dispatch = useDispatch()
 
     const isLogin = auth.isLoggedIn
-    console.log(isLogin)
     const mainMeuItems = [// 메인메뉴 
         {id : 0, title : '타이핑', url : '/'},
         {id : 1, title : '커스텀', url : '/custom'},
@@ -61,7 +60,7 @@ const Header = () => {
     return (
         <S.Header>
           <S.Logo>
-              <Link to={"/"}><S.LogoImg src="images/logo.jpg" alt='logo' width={70} height={70}/></Link>
+              <Link to={"/"}><S.LogoImg src="/images/logo.jpg" alt='logo' width={70} height={70}/></Link>
           </S.Logo>
           <S.Nav 
             onMouseEnter={EnterMenu}
@@ -85,8 +84,8 @@ const Header = () => {
                 <S.Auth>
                     <S.Line/>
                     <S.ImgButtonContainer>
-                      <img src='images/home/user.png' alt='user'/>
-                      <img src='images/home/notice.png' alt='notice'/>
+                      <img src='/images/home/user.png' alt='user'/>
+                      <img src='/images/home/notice.png' alt='notice'/>
                     </S.ImgButtonContainer>
                   <S.LogoutButton onClick={isLogout}>로그아웃</S.LogoutButton>
                 </S.Auth>

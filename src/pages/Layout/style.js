@@ -21,7 +21,7 @@ S.Header = styled.header`
 
 S.Main = styled.div`
     width: 100%;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 110px);
 `
 
 S.Logo = styled.div`
