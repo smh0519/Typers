@@ -13,7 +13,7 @@ S.TypingBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 `
 
 S.InputContanier = styled.div`
@@ -65,11 +65,13 @@ S.LettersBox = styled.div`
     &#next1 {
         left: 70%;
         transform: translateX(-50%);
+        color: #aaa;
     }
 
    &#next2 {
         left: 90%;
         transform: translateX(-50%);
+        color: #aaa;
     }
 
     &#end {
@@ -82,7 +84,16 @@ S.Hr = styled.div`
     width: 90%;
     margin: 0 auto;
     height: 2px;
+    position: absolute;
+    bottom: 5%;
     background-color: #6E58FF;
+`
+
+
+S.ScoreBord = styled.div`
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
 `
 
 export default S;

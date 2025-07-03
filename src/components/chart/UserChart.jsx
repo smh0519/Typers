@@ -25,7 +25,7 @@ ChartJS.register(
 
 const UserChart = () => {
   const labels = ['월', '화', '수', '목', '금', '토', '일'];
-  const dataValues = [190, 210, 350, 398, 299, 333, 380];
+  const dataValues = [190, 210, 5, 398, 299, 5, 5];
 
   const data = {
     labels: labels,

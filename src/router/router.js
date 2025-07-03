@@ -3,7 +3,7 @@ import LayOut from '../pages/Layout/LayOut';
 import Home from '../pages/homepage/Home';
 import AuthContainer from '../pages/auth/AuthContainer';
 import TypingKo from '../pages/typing/TypingKo';
-import Statistics from '../pages/typing/_components/statistics/Statistics';
+import Letters from '../pages/typing/_components/ko_letters/Letters';
 
 const router = createBrowserRouter([
     {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                     {
                         // 자리연습
                         path : "/ko/typing-4",
-                        element : <Statistics/>
+                        element : <Letters/>
                     },
                     {
                         // 낱말연습

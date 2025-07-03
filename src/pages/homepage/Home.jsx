@@ -3,7 +3,7 @@ import S from './style';
 import { useSelector } from 'react-redux';
 import GoToBlock from './_components/GoToBlock';
 import Example from './_components/ExampleImg/Example';
-import UserChart from '../../components/UserChart';
+import UserChart from '../../components/chart/UserChart';
 
 const Home = () => {
     const auth = useSelector((state)=> state.auth)
